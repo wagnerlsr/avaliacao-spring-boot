@@ -1,2 +1,2 @@
-INSERT INTO ESTUDANTE VALUES(1, 'Wagner', 'wagner@gmail.com', '955595999');
-INSERT INTO ESTUDANTE VALUES(2, 'Bruno', 'bruno@gmail.com', '123456789');
+INSERT INTO ESTUDANTE (id, nome, email, telefone) VALUES(null, 'Wagner', 'wagner@gmail.com', '955595999');
+INSERT INTO ESTUDANTE (id, nome, email, telefone) VALUES(null, 'Bruno', 'bruno@gmail.com', '123456789');

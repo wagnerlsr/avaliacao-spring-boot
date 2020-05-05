@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.repository.EstudanteRepository;
@@ -19,7 +20,11 @@ public class EstudanteServiceImpl implements EstudanteService {
 
 	
 	@Override
+	@Transactional
 	public void cadastrarEstudante(@Valid Estudante estudante) {
+
+		estudante.setId(null);
+		repository.save(estudante);
 
 	}
 

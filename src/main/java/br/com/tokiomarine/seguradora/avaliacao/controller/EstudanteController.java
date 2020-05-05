@@ -30,9 +30,8 @@ public class EstudanteController {
 
 	@GetMapping("listar")
 	public String listarEstudantes(Model model) {
-		System.out.println("======================================================");
-		model.addAttribute("${estudantes}", service.buscarEstudantes());
-		return "index";
+		model.addAttribute("estudantes", service.buscarEstudantes());
+		return "home";
 	}
 
 	@PostMapping("add")
