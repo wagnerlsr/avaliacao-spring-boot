@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.nelioalves.cursomc.domain.Cliente;
-
 import br.com.tokiomarine.seguradora.avaliacao.entidade.Estudante;
 import br.com.tokiomarine.seguradora.avaliacao.repository.EstudanteRepository;
 
@@ -57,10 +55,17 @@ public class EstudanteServiceImpl implements EstudanteService {
 
 	}
 
+	@Override
+	public void apagarEstudante(long id) {
+
+		repository.deleteById(id);
+		
+	}
+	
 	private void updateData(Estudante newObj, Estudante obj) {
 		newObj.setNome(obj.getNome());
 		newObj.setEmail(obj.getEmail());
 		newObj.setTelefone(obj.getTelefone());
 	}
-	
+
 }

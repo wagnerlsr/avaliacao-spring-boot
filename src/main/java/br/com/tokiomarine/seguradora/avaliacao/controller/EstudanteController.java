@@ -31,7 +31,7 @@ public class EstudanteController {
 	@GetMapping("listar")
 	public String listarEstudantes(Model model) {
 		model.addAttribute("estudantes", service.buscarEstudantes());
-		return "home";
+		return "redirect:/";
 	}
 
 	@PostMapping("add")
@@ -42,7 +42,7 @@ public class EstudanteController {
 
 		service.cadastrarEstudante(estudante);
 
-		return "redirect:listar";
+		return "redirect:/";
 	}
 
 	@GetMapping("editar/{id}")
@@ -65,14 +65,17 @@ public class EstudanteController {
 
 		model.addAttribute("estudantes", service.buscarEstudantes());
 	
-		return "home";
+		return "redirect:/";
 
 	}
 
 	@GetMapping("apagar/{id}")
 	public String apagarEstudante(@PathVariable("id") long id, Model model) {
-		// TODO IMPLEMENTAR A EXCLUSAO DE ESTUDANTES
+		
+		service.apagarEstudante(id);
+		
 		model.addAttribute("estudantes", service.buscarEstudantes());
-		return "index";
+
+		return "redirect:/";
 	}
-}
+}	
