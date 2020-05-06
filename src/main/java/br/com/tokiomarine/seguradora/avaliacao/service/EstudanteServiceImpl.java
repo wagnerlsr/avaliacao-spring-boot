@@ -66,6 +66,8 @@ public class EstudanteServiceImpl implements EstudanteService {
 		newObj.setNome(obj.getNome());
 		newObj.setEmail(obj.getEmail());
 		newObj.setTelefone(obj.getTelefone());
+		newObj.setMatricula(obj.getMatricula());
+		newObj.setCurso(obj.getCurso());
 	}
 
 }
