@@ -1,3 +1,6 @@
 Wagner Luiz da Silva Rodrigues
 wagnerlsr.ti@gmail.com
 (11) 9.5559-5999
+
+Link para acesso a aplicação rodando em um servidor AWS
+http://3.220.55.27:8081/
